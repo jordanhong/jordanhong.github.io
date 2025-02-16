@@ -40,7 +40,8 @@ a
     width: 100%;
     max-width: 880px;
     margin: 0 auto;
-    padding: 72px 8vw 24px;
+    /* padding: 72px 8vw 24px; */
+    padding: 72px 40px 24px;
     background: #fff;
     border-radius: 24px;
     background: #fff;
@@ -173,7 +174,7 @@ a
 .read-more
 {
     padding: 0 4px;
-    color: var(--font-color-0);   
+    color: var(--font-color-0);
 }
 .read-more:before,
 .read-more:after
@@ -334,8 +335,12 @@ a
 }
 .archive-main
 {
-    flex: 0 1 calc( 100% - 108px );
+    flex: 0 1 calc(100% - 108px);
+    padding: 1px 10px; /* Non-zero padding on left and right */
+    box-sizing: border-box; /* Ensures padding is included in width calculation */
+    border-radius: 8px;
 }
+
 .archive-title
 {
     color: var(--font-color-1);
@@ -343,6 +348,35 @@ a
 }
 .archive-title:hover
 {
+    color: var(--font-color-0);
+    transition: color ease-in-out .5s;
+}
+
+.archive-info {
+    font-size: 0.875rem;
+    /* margin-left: auto; /1* Pushes tags to the right *1/ */
+    float: right;
+    text-align: right;
+}
+
+/* Master tag list in archive page */
+.tag-list-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+/* Individual tag links*/
+.tag-link {
+    background-color: #eee;
+    margin: 5px;
+    padding: 5px 8px;
+    border-radius: 3px;
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    transition: background 0.3s ease;
+}
+.tag-link:hover {
     color: var(--font-color-0);
     transition: color ease-in-out .5s;
 }
